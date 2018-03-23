@@ -1,2 +1,2 @@
-import convertHTMLToPDF from './src/convertHTMLToPDF';
-export default convertHTMLToPDF;
+const convertHTMLToPDF = require('./src/convertHTMLToPDF');
+module.exports = convertHTMLToPDF;
