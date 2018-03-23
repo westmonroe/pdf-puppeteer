@@ -7,8 +7,10 @@ let convertHTMLToPDF = async (html, callback, options = null) => {
     options = { format: "letter" };
   }
   await page.setContent(html);
-  await page.pdf({ format: "letter" }).then(callback);
+  await page.pdf({ format: "letter" }).then(callback, function(error) {
+    console.log(error);
+  });
   await browser.close();
-}
+};
 
 module.exports = convertHTMLToPDF;
