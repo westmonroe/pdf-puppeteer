@@ -1,38 +1,48 @@
 {
-  "name": "pdf-puppeteer",
-  "version": "1.0.2",
-  "description": "A simple NPM package to convert html to pdf for Node applications by using Puppeteer",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/westmonroe/pdf-puppeteer.git"
-  },
-  "keywords": [
-    "pdf",
-    "puppeteer",
-    "html",
-    "html-to-pdf",
-    "pdf-from-html",
-    "chrome",
-    "pdf-generator",
-    "node",
-    "nodejs",
-    "pdf-creator",
-    "generate",
-    "generator",
-    "pdf-puppeteer",
-    "puppeteer-pdf"
-  ],
-  "author": "Joe Higgs",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/westmonroe/pdf-puppeteer/issues"
-  },
-  "homepage": "https://github.com/westmonroe/pdf-puppeteer#readme",
-  "dependencies": {
-    "puppeteer": "^1.2.0"
-  }
+    "name": "pdf-puppeteer",
+    "version": "1.0.2",
+    "description":
+        "A simple NPM package to convert html to pdf for Node applications by using Puppeteer",
+    "main": "index.js",
+    "scripts": {
+        "test": "jest"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/westmonroe/pdf-puppeteer.git"
+    },
+    "keywords": [
+        "pdf",
+        "puppeteer",
+        "html",
+        "html-to-pdf",
+        "pdf-from-html",
+        "chrome",
+        "pdf-generator",
+        "node",
+        "nodejs",
+        "pdf-creator",
+        "generate",
+        "generator",
+        "pdf-puppeteer",
+        "puppeteer-pdf"
+    ],
+    "author": "Joe Higgs",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/westmonroe/pdf-puppeteer/issues"
+    },
+    "homepage": "https://github.com/westmonroe/pdf-puppeteer#readme",
+    "dependencies": {
+        "puppeteer": "^1.2.0"
+    },
+    "devDependencies": {
+        "babel-core": "^6.26.0",
+        "babel-jest": "^22.4.3",
+        "jest": "^22.4.3"
+    },
+    "prettier": {
+        "tabWidth": 4,
+        "singleQuote": true
+    }
 }

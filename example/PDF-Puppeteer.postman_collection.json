@@ -1,39 +1,37 @@
 {
-	"variables": [],
-	"info": {
-		"name": "PDF-Puppeteer",
-		"_postman_id": "f7690560-fd3e-625b-0df4-e5f68521890e",
-		"description": "",
-		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
-	},
-	"item": [
-		{
-			"name": "PDF",
-			"request": {
-				"url": "http://localhost:3000/api/pdf",
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "\n<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\">\n<HTML>\n<HEAD>\n  <TITLE>PDF-Puppeteer Test Doc</TITLE>\n</HEAD>\n\n<BODY>\n<h1>PDF-Puppeteer</h1>\n<p>Test doc for the package.</p>\n<p style=\"color:red\">In-line styles are supported</p>\n</BODY>\n</HTML>\n"
-				},
-				"description": ""
-			},
-			"response": []
-		},
-		{
-			"name": "Ping",
-			"request": {
-				"url": "http://localhost:3000/api/ping",
-				"method": "GET",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "\n<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\">\n<HTML>\n<HEAD>\n  <TITLE>PDF-Puppeteer Test Doc</TITLE>\n</HEAD>\n\n<BODY>\n<h1>PDF-Puppeteer</h1>\n<p>Test doc for the package.</p>\n<p style=\"color:red\">In-line styles are supported</p>\n</BODY>\n</HTML>\n"
-				},
-				"description": ""
-			},
-			"response": []
-		}
-	]
+    "variables": [],
+    "info": {
+        "name": "PDF-Puppeteer",
+        "_postman_id": "f7690560-fd3e-625b-0df4-e5f68521890e",
+        "description": "",
+        "schema":
+            "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "PDF",
+            "request": {
+                "url": "http://localhost:3000/api/pdf",
+                "method": "POST",
+                "header": [],
+                "body": {
+                    "mode": "raw",
+                    "raw":
+                        "<!DOCTYPE HTML>\n<HTML>\n<HEAD>\n  <TITLE>PDF-Puppeteer Test Doc</TITLE>\n</HEAD>\n\n<BODY>\n<h1>PDF-Puppeteer</h1>\n<p>Test doc for the package.</p>\n<p style=\"color:red\">Styles are supported</p>\n</BODY>\n</HTML>\n"
+                },
+                "description": ""
+            },
+            "response": []
+        },
+        {
+            "name": "Ping",
+            "request": {
+                "url": "http://localhost:3000/api/ping",
+                "method": "GET",
+                "header": [],
+                "description": ""
+            },
+            "response": []
+        }
+    ]
 }
