@@ -26,13 +26,13 @@ First, include the `convertHTMLToPDF` from the package in your .js file:
 const convertHTMLToPDF = require("pdf-puppeteer");
 
 var callback = function (pdf) {
-	// do something with the PDF like send it as the response
+    // do something with the PDF like send it as the response
     res.setHeader("Content-Type", "application/pdf");
     res.send(pdf);
 }
 
 /**
-*	 Usage
+*    Usage
 *    @param html - This is the html to be converted to a pdf
 *    @param callback - Do something with the PDF
 *    @param [options] - Optional parameter to pass in Puppeteer PDF options
