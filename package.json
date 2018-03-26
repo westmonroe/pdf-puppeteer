@@ -1,8 +1,7 @@
 {
     "name": "pdf-puppeteer",
     "version": "1.0.2",
-    "description":
-        "A simple NPM package to convert html to pdf for Node applications by using Puppeteer",
+    "description": "A simple NPM package to convert html to pdf for Node applications by using Puppeteer",
     "main": "index.js",
     "scripts": {
         "test": "jest"
@@ -39,6 +38,7 @@
     "devDependencies": {
         "babel-core": "^6.26.0",
         "babel-jest": "^22.4.3",
+        "babel-preset-env": "^1.6.1",
         "jest": "^22.4.3"
     },
     "prettier": {

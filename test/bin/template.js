@@ -1,4 +1,4 @@
-<!DOCTYPE HTML>
+const template = `<!DOCTYPE HTML>
 <HTML>
 
 <HEAD>
@@ -11,4 +11,6 @@
     <p style="color:red">Styles are supported</p>
 </BODY>
 
-</HTML>
+</HTML>`;
+
+module.exports = template;

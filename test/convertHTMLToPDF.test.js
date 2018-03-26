@@ -1,14 +1,20 @@
 const convertHTMLToPDF = require('../src/convertHTMLToPDF');
 const index = require('../index');
-const exampleTemplate = require('./bin/example.html');
+//const buffer = require('./bin/buffer');
+const template = require('./bin/template')
+
+
 
 // somewhat silly test to test the export and for code coverage
 test('Index includes convertHTMLToPDF', () => {
     expect(typeof index).toBe('function');
 });
 
-test('Converts HTML To PDF', () => {});
-
-function testCallbackForConversion(pdf) {
-    expect(pdf).toBe(true);
-}
+// Loose check that this is not erroring, basically
+// TODO find way to compare values of PDF's generated with returned array buffer
+test('Converts HTML To PDF', done => {
+    convertHTMLToPDF(template, pdf => {
+        expect(Object.prototype.toString.call(pdf)).toBe("[object Uint8Array]");
+        done();
+    });
+});
