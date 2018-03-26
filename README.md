@@ -1,3 +1,7 @@
+![NPM Version]("https://img.shields.io/npm/v/pdf-puppeteer.svg") 
+![License]("https://img.shields.io/npm/l/pdf-puppeteer.svg") 
+![Downloads/week]("https://img.shields.io/npm/dw/pdf-puppeteer.svg")    
+
 # PDF-Puppeteer
 A simple npm package to convert HTML to PDF for Node.js applications by using Puppeteer   
 
