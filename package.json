@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/joehiggs/pdf-puppeteer.git"
+    "url": "git+https://github.com/westmonroe/pdf-puppeteer.git"
   },
   "keywords": [
     "pdf",
@@ -27,9 +27,9 @@
   "author": "Joe Higgs",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/joehiggs/pdf-puppeteer/issues"
+    "url": "https://github.com/westmonroe/pdf-puppeteer/issues"
   },
-  "homepage": "https://github.com/joehiggs/pdf-puppeteer#readme",
+  "homepage": "https://github.com/westmonroe/pdf-puppeteer#readme",
   "dependencies": {
     "puppeteer": "^1.2.0"
   }
