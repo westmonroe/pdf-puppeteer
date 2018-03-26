@@ -22,7 +22,9 @@
     "nodejs",
     "pdf-creator",
     "generate",
-    "generator"
+    "generator",
+    "pdf-puppeteer",
+    "puppeteer-pdf"
   ],
   "author": "Joe Higgs",
   "license": "MIT",
