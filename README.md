@@ -1,6 +1,6 @@
 # PDF-Puppeteer  
 <!-- [START badges] -->
-[![NPM Version](https://img.shields.io/npm/v/pdf-puppeteer.svg)](https://www.npmjs.com/package/pdf-puppeteer) [![License](https://img.shields.io/npm/l/pdf-puppeteer.svg)](https://github.com/westmonroe/pdf-puppeteer/blob/master/LICENSE) [![Downloads/week](https://img.shields.io/npm/dw/pdf-puppeteer.svg)](https://www.npmjs.com/package/pdf-puppeteer) 
+[![NPM Version](https://img.shields.io/npm/v/pdf-puppeteer.svg)](https://www.npmjs.com/package/pdf-puppeteer) ![Node Requirement](https://img.shields.io/node/v/pdf-puppeteer.svg)](https://www.npmjs.com/package/pdf-puppeteer) [![License](https://img.shields.io/npm/l/pdf-puppeteer.svg)](https://github.com/westmonroe/pdf-puppeteer/blob/master/LICENSE) [![Downloads/week](https://img.shields.io/npm/dw/pdf-puppeteer.svg)](https://www.npmjs.com/package/pdf-puppeteer) 
 <!-- [END badges] -->
 A simple npm package to convert HTML to PDF for Node.js applications by using Puppeteer   
 
