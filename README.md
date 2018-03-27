@@ -46,7 +46,7 @@ The `convertHTMLToPDF` function takes the three parameters detailed above. For m
 
 To run the example in the repo: clone the repo, npm install on the package, npm install on the example, and run the app:  
 ```bash
-git clone https://github.com/joehiggs/pdf-puppeteer.git  
+git clone https://github.com/westmonroe/pdf-puppeteer.git  
 cd pdf-puppeteer
 npm install
 cd example
