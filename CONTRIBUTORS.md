@@ -1,1 +1,1 @@
-Joe Higgs (joehiggs), Christopher Miller (christophermllr)
+Joe Higgs (joehiggs), Christopher Miller (christophermllr), Max (MaxGuitet)
