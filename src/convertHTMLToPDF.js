@@ -6,7 +6,7 @@ let convertHTMLToPDF = async (html, callback, options = null) => {
     if (!options) {
         options = { format: 'Letter' };
     }
-    await page.setContent(html);
+    await page.goto(`data:text/html,${html}`, { waitUntil: 'networkidle0' });
     await page.pdf(options).then(callback, function(error) {
         console.log(error);
     });
