@@ -36,11 +36,12 @@ var callback = function (pdf) {
 *    @param html - This is the html to be converted to a pdf
 *    @param callback - Do something with the PDF
 *    @param [options] - Optional parameter to pass in Puppeteer PDF options
+*	 @param [puppeteerArgs] - Optional parameter to pass in Puppeter arguments
 */
-convertHTMLToPDF(html, callback, options);
+convertHTMLToPDF(html, callback, options, puppeteerArgs);
 ```
 
-The `convertHTMLToPDF` function takes the three parameters detailed above. For more information on the available Puppeteer options for PDF's take a look at [Puppeteer's Page PDF Options](https://github.com/GoogleChrome/puppeteer/blob/master/docs/api.md#pagepdfoptions). More details on usage can be found by checking out the example in the repo.
+The `convertHTMLToPDF` function takes the four parameters detailed above. For more information on the available Puppeteer options for PDF's take a look at [Puppeteer's Page PDF Options](https://github.com/GoogleChrome/puppeteer/blob/master/docs/api.md#pagepdfoptions). More details on usage can be found by checking out the example in the repo.
 
 ### Example  
 

@@ -1,12 +1,18 @@
 const puppeteer = require('puppeteer');
 
-let convertHTMLToPDF = async (html, callback, options = null) => {
+let convertHTMLToPDF = async (html, callback, options = null, puppeteerArgs=null) => {
     if (typeof html !== 'string') {
         throw new Error(
             'Invalid Argument: HTML expected as type of string and received a value of a different type. Check your request body and request headers.'
         );
-    }
-    const browser = await puppeteer.launch();
+	}
+	let browser;
+	if (puppeteerArgs) {
+		browser = await puppeteer.launch(puppeteerArgs);
+	} else {
+		browser = await puppeteer.launch();
+	}
+
     const page = await browser.newPage();
     if (!options) {
         options = { format: 'Letter' };
