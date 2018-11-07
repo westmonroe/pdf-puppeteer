@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "730a996f-1999-4d1f-9f6c-cffe2465e374",
+		"_postman_id": "b437bf08-49c5-456c-af21-cf340541bb7c",
 		"name": "PDF-Puppeteer",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -72,6 +72,30 @@
 					"path": [
 						"api",
 						"ping"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "German characters",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "<html>\n<head>\n<title>This is a test with German characters</title>\n</head>\n<body>\n<p style=\"color: red; font-size: 4em;\">German characters äöü</p>\n</body>\n</html>"
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/pdf",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"pdf"
 					]
 				}
 			},

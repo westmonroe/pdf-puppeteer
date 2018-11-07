@@ -17,7 +17,7 @@ let convertHTMLToPDF = async (html, callback, options = null) => {
     await page.setRequestInterception(true);
     page.once('request', request => {
         // Fulfill request with HTML, and continue all subsequent requests
-        request.respond({ body: html });
+        request.respond({ body: html, contentType: 'text/html; charset=UTF-8' });
         page.on('request', request => request.continue());
     });
     await page.goto('https://google.com');
