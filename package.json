@@ -27,7 +27,7 @@
         "puppeteer-pdf"
     ],
     "author": "Joe Higgs",
-    "license": "BSD 3-Clause",
+    "license": "BSD-3-Clause",
     "bugs": {
         "url": "https://github.com/westmonroe/pdf-puppeteer/issues"
     },
