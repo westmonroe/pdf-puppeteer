@@ -1,6 +1,6 @@
 {
     "name": "pdf-puppeteer",
-    "version": "1.1.1",
+    "version": "1.1.2",
     "description": "A simple NPM package to convert html to pdf for Node applications by using Puppeteer",
     "main": "index.js",
     "scripts": {
