@@ -16,3 +16,16 @@ test('Converts HTML To PDF', done => {
         done();
     });
 });
+
+
+test('Converts HTML To PDF with Puppeteer Arguments', done => {
+    convertHTMLToPDF(template, pdf => {
+        expect(Object.prototype.toString.call(pdf)).toBe('[object Uint8Array]');
+        done();
+    }, {format: 'A4'}, {
+        args: [
+            '--no-sandbox',
+            '--disable-setuid-sandbox'
+        ]
+    });
+});
