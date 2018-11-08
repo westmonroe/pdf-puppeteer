@@ -48,9 +48,9 @@
     "engines": {
         "node": ">=7.6"
     },
-	"engineStrict": true,
-	"jest": {
-		"verbose": true,
-		"testURL": "http://localhost/"
-	}
+    "engineStrict": true,
+    "jest": {
+        "verbose": true,
+        "testURL": "http://localhost/"
+    }
 }
