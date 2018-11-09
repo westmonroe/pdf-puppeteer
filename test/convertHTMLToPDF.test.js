@@ -2,6 +2,7 @@ const convertHTMLToPDF = require('../src/convertHTMLToPDF');
 const index = require('../index');
 //const buffer = require('./bin/buffer');
 const template = require('./bin/template');
+const remoteTemplate = require('./bin/remoteTemplate');
 
 // somewhat silly test to test the export and for code coverage
 test('Index includes convertHTMLToPDF', () => {
@@ -18,7 +19,7 @@ test('Converts HTML To PDF', done => {
 });
 
 
-test('Converts HTML To PDF with Puppeteer Arguments', done => {
+test('Converts static HTML To PDF with Puppeteer Arguments', done => {
     convertHTMLToPDF(template, pdf => {
         expect(Object.prototype.toString.call(pdf)).toBe('[object Uint8Array]');
         done();
@@ -27,5 +28,17 @@ test('Converts HTML To PDF with Puppeteer Arguments', done => {
             '--no-sandbox',
             '--disable-setuid-sandbox'
         ]
-    });
+    }, false);
+});
+
+test('Converts remote HTML To PDF with Puppeteer Arguments', done => {
+    convertHTMLToPDF(remoteTemplate, pdf => {
+        expect(Object.prototype.toString.call(pdf)).toBe('[object Uint8Array]');
+        done();
+    }, {format: 'A4'}, {
+        args: [
+            '--no-sandbox',
+            '--disable-setuid-sandbox'
+        ]
+    }, true);
 });

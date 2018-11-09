@@ -1,6 +1,6 @@
 const puppeteer = require('puppeteer');
 
-let convertHTMLToPDF = async (html, callback, options = null, puppeteerArgs=null) => {
+let convertHTMLToPDF = async (html, callback, options = null, puppeteerArgs=null, remoteContent=false) => {
     if (typeof html !== 'string') {
         throw new Error(
             'Invalid Argument: HTML expected as type of string and received a value of a different type. Check your request body and request headers.'
@@ -17,17 +17,16 @@ let convertHTMLToPDF = async (html, callback, options = null, puppeteerArgs=null
     if (!options) {
         options = { format: 'Letter' };
     }
-    // From https://github.com/GoogleChrome/puppeteer/issues/728#issuecomment-359047638
-    // Using this method to preserve external resources while maximizing allowed size of pdf
-    // Capture first request only
-    await page.setRequestInterception(true);
-    page.once('request', request => {
-        // Fulfill request with HTML, and continue all subsequent requests
-        request.respond({ body: html, contentType: 'text/html; charset=UTF-8' });
-        page.on('request', request => request.continue());
-    });
-    await page.goto('https://google.com');
-
+    
+    if (remoteContent === true) {
+        await page.goto(`data:text/html,${html}`, {
+            waitUntil: 'networkidle0'
+        });
+    } else {
+        //page.setContent will be faster than page.goto if html is a static
+        await page.setContent(html);
+    }
+    
     await page.pdf(options).then(callback, function(error) {
         console.log(error);
     });
