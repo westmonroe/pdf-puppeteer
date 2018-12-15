@@ -37,8 +37,9 @@ var callback = function (pdf) {
 *    @param callback - Do something with the PDF
 *    @param [options] - Optional parameter to pass in Puppeteer PDF options
 *	 @param [puppeteerArgs] - Optional parameter to pass in Puppeter arguments
+*	 @param [remoteContent] - Default true. Optional parameter to specify if there is no remote content. Performance will be opitmized for no remote content.
 */
-convertHTMLToPDF(html, callback, options, puppeteerArgs);
+convertHTMLToPDF(html, callback, options, puppeteerArgs, remoteContent);
 ```
 
 The `convertHTMLToPDF` function takes the four parameters detailed above. For more information on the available Puppeteer options for PDF's take a look at [Puppeteer's Page PDF Options](https://github.com/GoogleChrome/puppeteer/blob/master/docs/api.md#pagepdfoptions). More details on usage can be found by checking out the example in the repo.
