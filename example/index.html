@@ -1,0 +1,32 @@
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>pdf-puppeteer</title>
+    </head>
+
+    <body>
+        <script type="text/javascript">
+            function test() {
+                var xhr = new XMLHttpRequest();
+                xhr.open('POST', 'http://localhost:3000/api/pdf');
+                xhr.setRequestHeader(
+                    'Content-Type',
+                    'text/plain;charset=UTF-8'
+                );
+                xhr.responseType = 'arraybuffer';
+                xhr.onload = data => {
+                    console.log(xhr);
+                    var link = document.createElement('a');
+                    link.href = window.URL.createObjectURL(
+                        new Blob([xhr.response], { type: 'application/pdf' })
+                    );
+                    link.download = 'customName.pdf';
+                    link.click();
+                    link.remove();
+                };
+                xhr.send('basic test pdf');
+            }
+        </script>
+        <a href="#" onclick="test()">download a pdf</a>
+    </body>
+</html>
