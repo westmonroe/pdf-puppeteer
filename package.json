@@ -34,14 +34,14 @@
     },
     "homepage": "https://github.com/westmonroe/pdf-puppeteer#readme",
     "dependencies": {
-        "puppeteer": "^1.18.1"
+        "puppeteer": "^1.20.0"
     },
     "devDependencies": {
         "@babel/preset-env": "^7.5.4",
         "babel-core": "^6.26.3",
         "babel-jest": "^22.4.3",
         "babel-preset-env": "^1.7.0",
-        "jest": "^24.8.0"
+        "jest": "^24.9.0"
     },
     "prettier": {
         "tabWidth": 4,
