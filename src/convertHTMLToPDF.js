@@ -20,7 +20,8 @@ let convertHTMLToPDF = async (html, callback, options = null, puppeteerArgs=null
 
     if (remoteContent === true) {
         await page.goto(`data:text/html;base64,${Buffer.from(html).toString('base64')}`, {
-            waitUntil: 'networkidle0'
+            waitUntil: 'networkidle0',
+            'timeout': '0'
         });
     } else {
         //page.setContent will be faster than page.goto if html is a static
