@@ -34,7 +34,7 @@
     },
     "homepage": "https://github.com/westmonroe/pdf-puppeteer#readme",
     "dependencies": {
-        "puppeteer": "^1.20.0"
+        "puppeteer": ">=1.20.0"
     },
     "devDependencies": {
         "@babel/preset-env": "^7.5.4",
