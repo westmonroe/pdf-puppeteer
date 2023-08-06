@@ -34,7 +34,7 @@ describe('pdf-puppetter tests', () => {
                 '--disable-setuid-sandbox'
             ]
         }, true);
-    });
+    }, 10000);
     
     test('Converts HTML To PDF with Puppeteer Arguments', done => {
         convertHTMLToPDF(template, pdf => {

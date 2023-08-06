@@ -1,6 +1,6 @@
 {
     "name": "pdf-puppeteer",
-    "version": "1.1.10",
+    "version": "1.1.11",
     "description": "A simple NPM package to convert html to pdf for Node applications by using Puppeteer",
     "main": "index.js",
     "types": "index.d.ts",
@@ -34,14 +34,14 @@
     },
     "homepage": "https://github.com/westmonroe/pdf-puppeteer#readme",
     "dependencies": {
-        "puppeteer": "^1.20.0"
+        "puppeteer": "^21.0.1"
     },
     "devDependencies": {
-        "@babel/preset-env": "^7.5.4",
+        "@babel/preset-env": "^7.22.9",
         "babel-core": "^6.26.3",
-        "babel-jest": "^22.4.3",
+        "babel-jest": "^29.6.2",
         "babel-preset-env": "^1.7.0",
-        "jest": "^24.9.0"
+        "jest": "^29.6.2"
     },
     "prettier": {
         "tabWidth": 4,
