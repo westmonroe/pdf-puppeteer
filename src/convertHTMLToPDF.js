@@ -1,17 +1,24 @@
 const puppeteer = require('puppeteer');
 
-let convertHTMLToPDF = async (html, callback, options = null, puppeteerArgs=null, remoteContent=true) => {
+/**
+ * Remark 1: if keepBrowserOpened is true, the caller is in charge of closing it calling convertHTMLToPDF.end()
+ */
+var g_puppeteerBrowser = null;
+let convertHTMLToPDF = async (html, callback, options = null, puppeteerArgs=null, remoteContent=true, keepBrowserOpened=false) => {
     if (typeof html !== 'string') {
         throw new Error(
             'Invalid Argument: HTML expected as type of string and received a value of a different type. Check your request body and request headers.'
         );
 	}
 	let browser;
-	if (puppeteerArgs) {
+    if (keepBrowserOpened && g_puppeteerBrowser) {
+        browser = g_puppeteerBrowser;
+	} else if (puppeteerArgs) {
 		browser = await puppeteer.launch(puppeteerArgs);
 	} else {
 		browser = await puppeteer.launch();
 	}
+    g_puppeteerBrowser = browser;
 
     const page = await browser.newPage();
     if (!options) {
@@ -30,7 +37,13 @@ let convertHTMLToPDF = async (html, callback, options = null, puppeteerArgs=null
     await page.pdf(options).then(callback, function(error) {
         console.log(error);
     });
-    await browser.close();
-};
+    await (keepBrowserOpened ? page.close() : closeBrowser());
 
-module.exports = convertHTMLToPDF;
+    return browser;
+};
+function closeBrowser() {
+    g_puppeteerBrowser.close();
+    g_puppeteerBrowser = null;
+}
+const pdfPuppeteerModule = module.exports = convertHTMLToPDF;
+pdfPuppeteerModule.end = closeBrowser;
