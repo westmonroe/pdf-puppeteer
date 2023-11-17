@@ -42,7 +42,7 @@ var callback = function (pdf) {
 convertHTMLToPDF(html, callback, options, puppeteerArgs, remoteContent);
 ```
 
-The `convertHTMLToPDF` function takes the four parameters detailed above. For more information on the available Puppeteer options for PDF's take a look at [Puppeteer's Page PDF Options](https://github.com/GoogleChrome/puppeteer/blob/master/docs/api.md#pagepdfoptions). More details on usage can be found by checking out the example in the repo. In addition, flags for configuring how Puppeteer should be launched can be set by populating the `puppeteerArgs` parameter. Take a look at [Puppeteer's Launch Options](https://github.com/GoogleChrome/puppeteer/blob/master/docs/api.md#puppeteerlaunchoptions) for example arguments. 
+The `convertHTMLToPDF` function takes the four parameters detailed above. For more information on the available Puppeteer options for PDF's take a look at [Puppeteer's Page PDF Options](https://github.com/puppeteer/puppeteer/blob/main/docs/api/puppeteer.pdfoptions.md). More details on usage can be found by checking out the example in the repo. In addition, flags for configuring how Puppeteer should be launched can be set by populating the `puppeteerArgs` parameter. Take a look at [Puppeteer's Launch Options](https://github.com/puppeteer/puppeteer/blob/main/docs/api/puppeteer.launchoptions.md) for example arguments. 
 
 ### Example  
 
